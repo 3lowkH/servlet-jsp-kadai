@@ -1,8 +1,8 @@
 package sj;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,9 +14,8 @@ public class LinkServlet extends HttpServlet {
 	{
         request.setCharacterEncoding("UTF-8");
         String userName = request.getParameter("name");
-        response.setContentType("text/html; charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        out.println("<a href=\"" + request.getContextPath() + "/link?name=侍太郎\">名前「侍太郎」をServletに送信</a><br>");
-        out.println(userName + "さん、こんにちは！");
+        request.setAttribute("message", userName + "さん、こんにちは！");
+        RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+        rd.forward(request, response);
 	}
 }
