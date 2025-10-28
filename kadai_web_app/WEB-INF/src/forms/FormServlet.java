@@ -15,16 +15,6 @@ public class FormServlet extends HttpServlet{
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
-		String name = request.getParameter("user");
-		String email = request.getParameter("email");
-		String address = request.getParameter("address");
-		String phone_number = request.getParameter("phone_number");
-		
-		request.setAttribute("_name", name);
-		request.setAttribute("_email", email);
-		request.setAttribute("_address", address);
-		request.setAttribute("_phone_number", phone_number);
-		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/formPage.jsp");
 		dispatcher.forward(request, response);
 	}

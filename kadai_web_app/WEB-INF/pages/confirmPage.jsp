@@ -14,19 +14,19 @@
             </tr>
             <tr>
                 <td>氏名</td>
-                <td>${_name}</td>
+                <td>${name}</td>
             </tr>
             <tr>
                 <td>メールアドレス</td>
-                <td>${_email}</td>
+                <td>${email}</td>
             </tr>
             <tr>
                 <td>住所</td>
-                <td>${_address}</td>
+                <td>${address}</td>
             </tr>
             <tr>
                 <td>電話番号</td>
-                <td>${_phone_number}</td>
+                <td>${phone_number}</td>
             </tr>
         </table>
 
